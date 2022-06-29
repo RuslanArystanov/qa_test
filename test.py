@@ -1,5 +1,5 @@
 import random
-
+from pathlib import Path
 
 def tz_one():
 
@@ -54,9 +54,16 @@ def tz_two():
         print(f'число {i} есть в списке, на позиции № {q}')
     else:
         print(f'числа {i} не найдено в списке ')
+        
+        
+  def tz_thre():
+
+    string = r'c:\WebServers\home\testsite\www\myfile.txt'
+    print(Path(string).stem) #stem свойство в функции pathlib.Path.stem(), которое возвращает имя файла без его расширения
 
 
 if __name__ == '__main__':
     tz_one()
     tz_one_part_two()
     tz_two()
+    tz_thre()
